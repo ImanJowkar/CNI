@@ -82,3 +82,12 @@ spec:
             command: ["echo", "Hello Kubernetes!!!"]
           restartPolicy: Never
 ```
+
+
+# delete jobs after completion
+you have to add in `/etc/kubernetes/manifest/kube-apiserver.yaml` 
+
+```
+- --feature-gates=TTLAfterFinished=true
+
+```
